@@ -1,25 +1,25 @@
 class Trev < Formula
   desc "Fast TUI file viewer with tree view, syntax-highlighted preview, and Neovim integration"
   homepage "https://github.com/nabekou29/trev"
-  version "0.1.9"
+  version "0.1.10"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/nabekou29/trev/releases/download/v0.1.9/trev-aarch64-apple-darwin.tar.xz"
-      sha256 "bdfc737ae09e43859c2629c79134631dd49c3f23b05faee6648a52e8fddf3a50"
+      url "https://github.com/nabekou29/trev/releases/download/v0.1.10/trev-aarch64-apple-darwin.tar.xz"
+      sha256 "f2bbc505ae7f22ca1129160e9bfce0c5c91e4ebe0b3b242cbd1d5d098ff5984b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/nabekou29/trev/releases/download/v0.1.9/trev-x86_64-apple-darwin.tar.xz"
-      sha256 "cb55912ac10fcdb7809b6f1a7fc67554699ec7dfb52ed784f954f14c7c122fba"
+      url "https://github.com/nabekou29/trev/releases/download/v0.1.10/trev-x86_64-apple-darwin.tar.xz"
+      sha256 "f07a58e6306d7f017b453e239952f49cad9f537c2803ad38380ea38457d9d0be"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/nabekou29/trev/releases/download/v0.1.9/trev-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "e5eb44ad85c4ad0da034c4a93b48ade1373abed88763b3701a20dda98dc23666"
+      url "https://github.com/nabekou29/trev/releases/download/v0.1.10/trev-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "b60ce814369e51ac4ed707a7011c9c1204c0bd368b6e3e95c13fcad5738c0ea1"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/nabekou29/trev/releases/download/v0.1.9/trev-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "3356742173d76bdbf60381b043cef488599842ff14072d151bf65000b5f4d5a1"
+      url "https://github.com/nabekou29/trev/releases/download/v0.1.10/trev-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "4fd907e5a7b2aac5cbebcee8f036c7bf4c716e7c6931a5bdacc405a617b5a305"
     end
   end
   license "MIT"
