@@ -1,25 +1,25 @@
 class Trev < Formula
   desc "Fast TUI file viewer with tree view, syntax-highlighted preview, and Neovim integration"
   homepage "https://github.com/nabekou29/trev"
-  version "0.1.11"
+  version "0.1.12"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/nabekou29/trev/releases/download/v0.1.11/trev-aarch64-apple-darwin.tar.xz"
-      sha256 "99df0c2e7d12c4049bbe9881b847822e5b58a3ad377488ff9b9621a77e88655a"
+      url "https://github.com/nabekou29/trev/releases/download/v0.1.12/trev-aarch64-apple-darwin.tar.xz"
+      sha256 "af96b189ed641b71526e33f42f75c36a40e7ea763be10dcd6e73eeb8c60edb22"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/nabekou29/trev/releases/download/v0.1.11/trev-x86_64-apple-darwin.tar.xz"
-      sha256 "97203b47a7e24c3488a5f287d9bba61b95a8cf959416649fed10d70570372641"
+      url "https://github.com/nabekou29/trev/releases/download/v0.1.12/trev-x86_64-apple-darwin.tar.xz"
+      sha256 "9f8bfed5878b959656028a87be255e1432c5046eb661825298fb2787b6990392"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/nabekou29/trev/releases/download/v0.1.11/trev-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "8beeb0498f3db76ddee080854ed2f9b759a37be6cfce8d1d5a4e1dae8d10f8ec"
+      url "https://github.com/nabekou29/trev/releases/download/v0.1.12/trev-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "83191ba31b553765bb778630f72df006d71ca212c00c7d87a7b41b1b89ea8e7d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/nabekou29/trev/releases/download/v0.1.11/trev-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "6aa9e65cc4934521095f9f041b6239fbaedffeb7fba8ddf64cfab00b08912f07"
+      url "https://github.com/nabekou29/trev/releases/download/v0.1.12/trev-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "a97f8102d444a30207b556a9061df4e2f45f1f18460fbd67d9e973841ec71062"
     end
   end
   license "MIT"
@@ -47,10 +47,18 @@ class Trev < Formula
   end
 
   def install
-    bin.install "trev" if OS.mac? && Hardware::CPU.arm?
-    bin.install "trev" if OS.mac? && Hardware::CPU.intel?
-    bin.install "trev" if OS.linux? && Hardware::CPU.arm?
-    bin.install "trev" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "trev"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "trev"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "trev"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "trev"
+    end
 
     install_binary_aliases!
 
